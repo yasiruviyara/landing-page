@@ -2,29 +2,22 @@
 
 import img2 from '../src/Image/img2.png';
 import img3 from '../src/Image/img3.png'
+import $ from 'jquery';
 
 import './App.css';
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-     acc[i].addEventListener("click", function() {
-     this.classList.toggle("active");
-     var panel = this.nextElementSibling;
-     if (panel.style.maxHeight) {
-       panel.style.maxHeight = null;
-     } else {
-       panel.style.maxHeight = panel.scrollHeight + "px";
-     } 
-     });
-}
 
 
 
 
 function App() {
+ 
+  // var acc = document.getElementsByClassName("accordion");
+  
 
+  function accordion(i){
+    $(".panel["+i+"]").css('max-height', '10vh');
+  }
   
 
 
@@ -82,24 +75,24 @@ function App() {
         Frequently asked questions
       </h2>
 
-      <button class="accordion">
+      <button class="accordion" onClick={accordion(1)}>
       Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
       </button>
-      <div class="panel">
+      <div class="panel1">
       <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
       </div>
 
      <button class="accordion">
      Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?
      </button>
-     <div class="panel">
+     <div class="panel2">
      <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
      </div>
 
     <button class="accordion">
     Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?
     </button>
-    <div class="panel">
+    <div class="panel3">
     <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
     </div>
 

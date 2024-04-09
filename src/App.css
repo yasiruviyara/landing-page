@@ -163,7 +163,7 @@
 .page3{
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 120vh;
+  height: 60vh;
 }
 
 .title3{
@@ -210,15 +210,40 @@
   content: "\2212";
 }
 
-.panel {
+.panel1 {
   width: 70vw;
   margin-left: 10vw;
   padding: 0 18px;
   background-color: rgb(255, 255, 255);
-  max-height: 0;
+  height: vw;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   font-family: "Inter", sans-serif;
+  /* visibility:hidden; */
+}
+
+.panel2 {
+  width: 70vw;
+  margin-left: 10vw;
+  padding: 0 18px;
+  background-color: rgb(255, 255, 255);
+  height: 0vw;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: "Inter", sans-serif;
+  visibility:hidden;
+}
+
+.panel3 {
+  width: 70vw;
+  margin-left: 10vw;
+  padding: 0 18px;
+  background-color: rgb(255, 255, 255);
+  height: 0vw;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: "Inter", sans-serif;
+  visibility:hidden;
 }
 
 
