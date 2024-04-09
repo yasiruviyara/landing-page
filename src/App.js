@@ -5,17 +5,10 @@ import img3 from '../src/Image/img3.png'
 
 import './App.css';
 
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-
-
-
-
-function App() {
-
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
+for (i = 0; i < acc.length; i++) {
      acc[i].addEventListener("click", function() {
      this.classList.toggle("active");
      var panel = this.nextElementSibling;
@@ -25,7 +18,14 @@ function App() {
        panel.style.maxHeight = panel.scrollHeight + "px";
      } 
      });
-  }
+}
+
+
+
+
+function App() {
+
+  
 
 
 
@@ -77,22 +77,30 @@ function App() {
          </div>
 
       </div>
-      <div className="page3">
-      <h2>Accordion</h2>
+      <div class="page3">
+      <h2 class="title3">
+        Frequently asked questions
+      </h2>
 
-      <button class="accordion">Section 1</button>
+      <button class="accordion">
+      Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
+      </button>
       <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
       </div>
 
-     <button class="accordion">Section 2</button>
+     <button class="accordion">
+     Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?
+     </button>
      <div class="panel">
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+     <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
      </div>
 
-    <button class="accordion">Section 3</button>
+    <button class="accordion">
+    Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?
+    </button>
     <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
     </div>
 
    </div>
