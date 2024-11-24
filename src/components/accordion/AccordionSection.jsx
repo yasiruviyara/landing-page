@@ -7,13 +7,15 @@ const Accordion = ({title,children}) => {
     const [isOpen, setIsOpen] = useState(false);
     return(
         <>
-            <div className="border-b border-gray-200">
+            <div className="border-b border-gray-200 select-none bg-[#FAF8FF] rounded-md">
                 <div
-                    className="flex justify-between items-center p-4 cursor-pointer"
+                    className="flex justify-between items-center gap-5 p-4 cursor-pointer"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <h2 className={`cursor-pointer text-lg font-medium ${isOpen ? 'text-[--primary-color]':'text-black'}`}>{title}</h2>
-                    {isOpen ? <HiOutlineMinus/> : <GoPlus/>}
+                     <div>
+                         {isOpen ? <HiOutlineMinus size={24}/> : <GoPlus size={24}/>}
+                     </div>
                 </div>
                 {isOpen && (
                     <div className="cursor-pointer p-4 text-[--triadic-color-1]">
