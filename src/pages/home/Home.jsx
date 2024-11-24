@@ -27,14 +27,14 @@ function Home() {
                     {/*card sections*/}
                     <div className="">
                         <CardSection
-                            img={img2}
+                            img={img2 || `https://placehold.co/300x240?text=Loading...`}
                             title="Web & Mobile App Development"
                             text={"Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks which tailor content and engagement methods to respond to different intents shown by your potential customers who interact with your business online."}
                             path="/"
                             type="card-1"
                         />
                         <CardSection
-                            img={img3}
+                            img={img3 || `https://placehold.co/300x240?text=Loading...`}
                             title="Digital Strategy Consulting"
                             text={"Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a different mix. We provide a clear concept and strategic overview to find the most efficient model for your business."}
                             path="/"
