@@ -1,15 +1,19 @@
-import PropTypes from 'prop-types';
+import {BrowserRouter, Routes, Route, Outlet} from 'react-router-dom';
 
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./pages/home/Home.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 
-const Layout = ({ children }) => {
+const Layout = () => {
     return (
         <>
         <Navbar />
-        <main>{children}</main>
-        <Footer />
+            <main style={{
+                minHeight:'100vh',
+            }}>
+                <Outlet/>
+            </main>
+            <Footer/>
         </>
     );
 }
@@ -17,18 +21,17 @@ const Layout = ({ children }) => {
 
 function App() {
 
-
   return (
       <>
-      <Layout>
-          <Home />
-      </Layout>
+      <BrowserRouter>
+          <Routes>
+              <Route element={<Layout />} >
+                  <Route path="/" element={<Home />} />
+              </Route>
+          </Routes>
+      </BrowserRouter>
       </>
   )
 }
 
 export default App
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
-};
