@@ -1,4 +1,6 @@
-# AT DIGITAL
+# Landing Page - AT DIGITAL
+
+![cover.png](src/assets/cover.png)
 
 This project is a web application built using Vite, React.js, Tailwind CSS, React Icons, and Google Fonts. It focuses on responsiveness, SEO, performance, best practices, and simple, readable code.
 
