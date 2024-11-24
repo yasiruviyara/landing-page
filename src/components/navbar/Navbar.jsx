@@ -19,7 +19,7 @@ function Navbar() {
   return (
       <>
           <header className="bg-[--primary-color] text-white relative w-full z-10">
-              <div className="w-full flex items-center justify-between px-10 py-5">
+              <div className="w-full flex items-center justify-between px-4 sm:px-10 py-3 sm:py-5">
                   {/* Logo Section */}
                   <Link to="/">
                       <div className="flex items-center gap-2">
