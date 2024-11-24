@@ -8,10 +8,10 @@ const Layout = () => {
     return (
         <>
         <Navbar />
-        <main>
-            <Outlet />
-        </main>
-        <Footer />
+            <main>
+                <Outlet/>
+            </main>
+            {/*<Footer/>*/}
         </>
     );
 }
@@ -24,7 +24,10 @@ function App() {
       <BrowserRouter>
           <Routes>
               <Route element={<Layout />} >
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={
+                      <div>Home</div>
+                      // <Home />
+                  } />
               </Route>
           </Routes>
       </BrowserRouter>

@@ -6,6 +6,7 @@ function Home() {
     return (
         <>
         <div className="main2">
+
             <div className="img1" id="img1">
                 <div className="box1">
                     <h1 className="text1">
