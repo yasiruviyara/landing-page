@@ -9,7 +9,7 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navbarLists = [
-        { name: "Home", path: "/home" },
+        // { name: "Home", path: "/" },
         { name: "Services", path: "/services" },
         { name: "About Us", path: "/about-us" },
         { name: "Contact Us", path: "/contact-us" },
@@ -18,20 +18,20 @@ function Navbar() {
 
   return (
       <>
-          <header className="bg-gray-800 text-white fixed w-full z-10">
-              <div className="container mx-auto flex items-center justify-between p-4">
+          <header className="bg-[--primary-color] text-white relative w-full z-10">
+              <div className="w-full flex items-center justify-between px-8 py-4">
                   {/* Logo Section */}
                   <Link to="/">
                       <div className="flex items-center gap-2">
-                          <img src={logo} alt="Logo" className="object-cover object-center"/>
+                          <img src={logo} alt="Logo" className="w-[200px] object-cover object-center"/>
                       </div>
                   </Link>
 
                   {/* Desktop Navigation */}
-                  <nav className="hidden md:flex items-center gap-8">
+                  <nav className="hidden md:flex items-center gap-7 ">
                       {navbarLists.map((item, i) => (
                           <div key={`navbar-${i}`} className="relative group">
-                              <Link to={item.path} className="hover:text-[--primary]">
+                              <Link to={item.path} className="text-sm font-medium hover:text-gray-200 uppercase">
                                   {item.name}
                               </Link>
                           </div>
@@ -49,7 +49,7 @@ function Navbar() {
 
               {/* Mobile Navigation */}
               <div
-                  className={`fixed top-0 left-0 mt-[4.25em] pr-5 pl-0 h-full bg-gray-800 z-50 transform transition-transform duration-300 ease-in-out ${
+                  className={`fixed top-0 left-0 mt-[4.25em] pr-5 pl-0 h-full bg-[--primary-color] z-50 transform transition-transform duration-300 ease-in-out ${
                       menuOpen ? "translate-x-0" : "-translate-x-full"
                   }`}
                   style={{
@@ -63,7 +63,7 @@ function Navbar() {
                               <li key={`mobile-nav-${i}`} className="mb-2">
                                   <Link
                                       to={item.path}
-                                      className="block hover:bg-gray-600 p-2 rounded"
+                                      className="uppercase"
                                       onClick={() => setMenuOpen(false)}
                                   >
                                       {item.name}

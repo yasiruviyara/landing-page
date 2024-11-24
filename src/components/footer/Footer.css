@@ -5,7 +5,7 @@
     margin-top: 3vh;
     background-color: var(--primary-color);
     position: absolute;
-    
+
 }
 
 .logo2{
@@ -99,13 +99,13 @@
         margin-top: 380vh;
         background-color: var(--primary-color);
         position: absolute;
-        
+
     }
 
     .logo2{
         margin-top: 5vh;
         margin-left: 5vw;
-        
+
     }
 
 
@@ -115,9 +115,9 @@
         margin-left: 5%;
         margin-top: 15vh;
         position: absolute;
-    
+
     }
-    
+
     .box5{
         margin-left: 5vw;
         font-family: "Inter", sans-serif;
@@ -127,11 +127,11 @@
         position: absolute;
         margin-top: 24vh;
     }
-    
+
     .box5_1{
         margin-left: -10vw;
     }
-    
+
     .box6{
         margin-left: 5vw;
         font-family: "Inter", sans-serif;
@@ -141,7 +141,7 @@
         position: absolute;
         margin-top: 52vh;
     }
-    
+
     .text5{
         padding: 0px;
         padding-top: 10px;
@@ -150,7 +150,7 @@
         font-size: 14px;
         font-weight: 400;
     }
-    
+
     .text6{
         padding: 0px;
         padding-top: 10px;
@@ -161,10 +161,10 @@
         font-size: 14px;
         font-weight: 400;
     }
-    
-    
-    
-    
+
+
+
+
     .line{
         background-color: white;
         width: 68%;
@@ -173,14 +173,14 @@
         margin-top: 82vh;
         margin-left: 5vw;
     }
-    
+
     .box7{
         position: absolute;
         margin-top: 80vh;
         margin-left: 0vw;
         display: flex;
     }
-    
+
     .text7{
         width: 25vw;
         padding-left: 0px;

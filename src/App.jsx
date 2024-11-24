@@ -8,10 +8,12 @@ const Layout = () => {
     return (
         <>
         <Navbar />
-            <main>
+            <main style={{
+                minHeight:'100vh',
+            }}>
                 <Outlet/>
             </main>
-            {/*<Footer/>*/}
+            <Footer/>
         </>
     );
 }
