@@ -1,6 +1,6 @@
-import img1 from '../../assets/img1.png';
-import img2 from '../../assets/img2.png';
-import img3 from '../../assets/img3.png';
+import img1 from '../../assets/img1.webp';
+import img2 from '../../assets/img2.webp';
+import img3 from '../../assets/img3.webp';
 import {PrimaryButton} from "../../components/button/primary-button/PrimaryButton.jsx";
 import AccordionSection from "../../components/accordion/AccordionSection.jsx";
 import {CardSection} from "../../components/section/CardSection.jsx";
@@ -23,7 +23,7 @@ function Home() {
                         <PrimaryButton text="GET FREE CONSULTATION" path="/"/>
                     </div>
                 </div>
-                <div className='px-10 md:px-20 '>
+                <div className='px-5 sm:px-10 md:px-20 '>
                     {/*card sections*/}
                     <div className="">
                         <CardSection
