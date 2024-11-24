@@ -1,5 +1,5 @@
 import {FaBars, FaTimes} from 'react-icons/fa';
-
+import { RiCloseLargeFill } from "react-icons/ri";
 import logo from '../../assets/logo.svg';
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -19,11 +19,11 @@ function Navbar() {
   return (
       <>
           <header className="bg-[--primary-color] text-white relative w-full z-10">
-              <div className="w-full flex items-center justify-between px-8 py-4">
+              <div className="w-full flex items-center justify-between px-10 py-5">
                   {/* Logo Section */}
                   <Link to="/">
                       <div className="flex items-center gap-2">
-                          <img src={logo} alt="Logo" className="w-[200px] object-cover object-center"/>
+                          <img src={logo} alt="Logo" className="w-[220px] object-cover object-center"/>
                       </div>
                   </Link>
 
@@ -43,27 +43,37 @@ function Navbar() {
                       className="block md:hidden text-white"
                       onClick={() => setMenuOpen(!menuOpen)}
                   >
-                      {menuOpen ? <FaTimes size={28}/> : <FaBars size={28}/>}
+                      {!menuOpen && <FaBars size={28}/>}
                   </button>
               </div>
 
               {/* Mobile Navigation */}
               <div
-                  className={`fixed top-0 left-0 mt-[4.25em] pr-5 pl-0 h-full bg-[--primary-color] z-50 transform transition-transform duration-300 ease-in-out ${
+                  className={`fixed top-0 left-0 px-5 py-4 h-full bg-white text-black z-50 transform transition-transform duration-300 ease-in-out ${
                       menuOpen ? "translate-x-0" : "-translate-x-full"
                   }`}
                   style={{
-                      width: menuOpen ? "fit-content" : "0",
-                      maxWidth: "400px",
+                      width: menuOpen ? "100%" : "0",
+                      maxWidth: "480px",
                   }}
               >
                   {menuOpen && (
-                      <ul className="flex flex-col p-4">
+                  <div className='relative'>
+                      <div className='w-full flex justify-end absolute'>
+                          <button
+                              className="block md:hidden text-black"
+                              onClick={() => setMenuOpen(!menuOpen)}
+                          >
+                              <RiCloseLargeFill size={24}/>
+                          </button>
+                      </div>
+
+                      <ul className="flex flex-col p-4 gap-6 pt-6">
                           {navbarLists.map((item, i) => (
-                              <li key={`mobile-nav-${i}`} className="mb-2">
-                                  <Link
+                              <li key={`mobile-nav-${i}`} className="">
+                                <Link
                                       to={item.path}
-                                      className="uppercase"
+                                      className="text-base font-medium uppercase"
                                       onClick={() => setMenuOpen(false)}
                                   >
                                       {item.name}
@@ -71,6 +81,7 @@ function Navbar() {
                               </li>
                           ))}
                       </ul>
+                  </div>
                   )}
               </div>
           </header>
